@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Flappy Bird</title>
+        <script src="main-loop.js" defer></script>
+        <style>
+            h1 {
+                text-align: center;
+                margin: 2px;
+            }
+            #flappy-div, #buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #flappy {
+                border: 1px solid black;
+            }
+            button {
+                width: 30px;
+                margin: 3px;
+            }
+        </style>
+        <script src="flappy-bird.js" defer></script>
+    </head>
+    <body>
+        <h1>Flappy Bird!</h1>
+        <div id="flappy-div">
+            <canvas id="flappy"></canvas>
+        </div>
+        <div id="buttons">
+        </div>
+    </body>
+</html>
