@@ -734,10 +734,10 @@ class FlappyBird {
     #somComecou() {
         this.#musica?.pause();
         this.#musica = new Audio();
-        this.#musica.src = "${SOM}/voarvoar.${SOM}";
+        this.#musica.src = `${SOM}/voarvoar.${SOM}`;
         this.#musica.onended = () => {
             this.#musica = new Audio();
-            this.#musica.src = "${SOM}/Foo-Fighters-Learn-To-Fly.${SOM}";
+            this.#musica.src = `${SOM}/Foo-Fighters-Learn-To-Fly.${SOM}`;
             this.#musica.volume = 0.2;
             this.#musica.loop = true;
             this.#musica.play();
@@ -766,7 +766,7 @@ class FlappyBird {
     #somGanhou() {
         this.#musica?.pause();
         this.#musica = new Audio();
-        this.#musica.src = "${SOM}/voarvoar.${SOM}";
+        this.#musica.src = `${SOM}/voarvoar.${SOM}`;
         this.#musica.play();
     }
 
