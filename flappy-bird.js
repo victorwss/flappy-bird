@@ -2,6 +2,7 @@
 
 const FASE_INICIAL = 1;
 const FASES_ABERTAS = 13;
+const SOM = "mp3";
 
 function randomInt(a, b) {
     if (b < a) [a, b] = [b, a];
@@ -725,7 +726,7 @@ class FlappyBird {
 
     #somPassouFase(fase) {
         const a = new Audio();
-        a.src = `mp3/fase${fase}.mp3`;
+        a.src = `${SOM}/fase${fase}.${SOM}`;
         a.play();
         document.getElementById("recomecar-" + fase).removeAttribute("disabled");
     }
@@ -733,10 +734,10 @@ class FlappyBird {
     #somComecou() {
         this.#musica?.pause();
         this.#musica = new Audio();
-        this.#musica.src = "mp3/voarvoar.mp3";
+        this.#musica.src = "${SOM}/voarvoar.${SOM}";
         this.#musica.onended = () => {
             this.#musica = new Audio();
-            this.#musica.src = "mp3/Foo-Fighters-Learn-To-Fly.mp3";
+            this.#musica.src = "${SOM}/Foo-Fighters-Learn-To-Fly.${SOM}";
             this.#musica.volume = 0.2;
             this.#musica.loop = true;
             this.#musica.play();
@@ -746,17 +747,17 @@ class FlappyBird {
 
     #somBateAsas() {
         const a = new Audio();
-        a.src = `mp3/piu${randomInt(1, 4)}.mp3`;
+        a.src = `${SOM}/piu${randomInt(1, 4)}.${SOM}`;
         a.play();
     }
 
     #somMorreu() {
         this.#musica?.pause();
         this.#musica = new Audio();
-        this.#musica.src = `mp3/plaft${randomInt(1, 4)}.mp3`;
+        this.#musica.src = `${SOM}/plaft${randomInt(1, 4)}.${SOM}`;
         this.#musica.onended = () => {
             this.#musica = new Audio();
-            this.#musica.src = `mp3/grito${randomInt(1, 6)}.mp3`;
+            this.#musica.src = `${SOM}/grito${randomInt(1, 6)}.${SOM}`;
             this.#musica.play();
         };
         this.#musica.play();
@@ -765,7 +766,7 @@ class FlappyBird {
     #somGanhou() {
         this.#musica?.pause();
         this.#musica = new Audio();
-        this.#musica.src = "mp3/voarvoar.mp3";
+        this.#musica.src = "${SOM}/voarvoar.${SOM}";
         this.#musica.play();
     }
 
